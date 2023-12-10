@@ -75,6 +75,8 @@ extern "C"
     extern const float32_t twiddleCoef_2048[4096];
 
     extern const float32_t twiddleCoef_4096[8192];
+    
+    extern const float32_t twiddleCoef_8192[16384];	//TL1
     #define twiddleCoef twiddleCoef_4096
 
   /* Q31 */

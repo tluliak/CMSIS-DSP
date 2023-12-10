@@ -246,6 +246,33 @@ arm_status arm_rfft_fast_init_4096_f32( arm_rfft_fast_instance_f32 * S ) {
   return ARM_MATH_SUCCESS;
 }
 
+/* 8K 32 - bit Floating Point Real FFT added TLULIAK */
+/**
+* @brief         Initialization function for the 8192pt floating-point real FFT.
+* @param[in,out] S  points to an arm_rfft_fast_instance_f32 structure
+  @return        execution status
+                   - \ref ARM_MATH_SUCCESS        : Operation successful
+                   - \ref ARM_MATH_ARGUMENT_ERROR : an error is detected
+ */
+
+arm_status arm_rfft_fast_init_8192_f32(arm_rfft_fast_instance_f32* S) {
+
+    arm_status status;
+
+    if (!S) return ARM_MATH_ARGUMENT_ERROR;
+
+    status = arm_cfft_init_4096_f32(&(S->Sint));
+    if (status != ARM_MATH_SUCCESS)
+    {
+        return(status);
+    }
+    S->fftLenRFFT = 8192U;
+
+    S->pTwiddleRFFT = (float32_t*)twiddleCoef_rfft_8192;
+
+    return ARM_MATH_SUCCESS;
+}
+
 /**
   @brief         Generic initialization function for the floating-point real FFT.
   @param[in,out] S       points to an arm_rfft_fast_instance_f32 structure

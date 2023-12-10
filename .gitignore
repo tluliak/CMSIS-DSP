@@ -31,3 +31,4 @@ __pycache__/
 build/
 Examples/cmsis_build/RTE/_Release*
 Testing/cmsis_build/RTE/_Release*
+/.vs

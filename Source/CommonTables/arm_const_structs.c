@@ -309,6 +309,13 @@ const arm_rfft_fast_instance_f32 arm_rfft_fast_sR_f32_len4096 = {
 
 #endif /* #if !defined(ARM_MATH_MVEF) || defined(ARM_MATH_AUTOVECTORIZE) */
 
+// 8K FFT added TLULIAK
+const arm_rfft_fast_instance_f32 arm_rfft_fast_sR_f32_len8192 = { //TL1
+  { 4096, twiddleCoef_4096, armBitRevIndexTable4096, ARMBITREVINDEXTABLE_4096_TABLE_LENGTH },
+  8192U,
+  (float32_t*)twiddleCoef_rfft_8192
+};
+
 /* Fixed-point structs */
 /* q31_t */
 
