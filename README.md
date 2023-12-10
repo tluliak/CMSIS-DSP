@@ -4,7 +4,7 @@
 
 
 ## About
-This fork of CMSIS-DSP includes an 8192-point Real-input Floating Point FFT added by TLULIAK.
+This fork of CMSIS-DSP includes an 8192-point Real-input Floating Point FFT.
 
 CMSIS-DSP is an optimized compute library for embedded systems (DSP is in the name for legacy reasons).
 
